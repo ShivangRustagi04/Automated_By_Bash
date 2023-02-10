@@ -1,6 +1,6 @@
 #!/bin/bash
 
-
+export ver=1
 read -p "Please enter the Github Repo Url (including .git extension): " url
 
 
@@ -8,12 +8,23 @@ git init
 
 git add .
 
+
 for i in {1..100}
 do
-	git commit -m ""${i}" Commit"
+	ver=${i}
 	((i++))
 
 done
+
+git commit -m ""${ver}" Commit"
+
+
+#for i in {1..100}
+#do
+	#git commit -m ""${i}" Commit"
+	#((i++))
+
+#done
 
 git remote add origin ${url}
 
