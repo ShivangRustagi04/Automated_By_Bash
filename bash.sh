@@ -11,7 +11,7 @@ git add .
 for i in {1..100}
 do
 	git commit -m ""${i}" Commit"
-	#echo ${i}
+	((i++))
 
 done
 
